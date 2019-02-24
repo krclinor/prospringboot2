@@ -1,0 +1,3 @@
+com/linor/todo/domain/ToDo.class
+com/linor/todo/repository/TodoRepository.class
+com/linor/todo/controller/ToDoController.class

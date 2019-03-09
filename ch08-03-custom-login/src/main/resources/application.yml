@@ -1,0 +1,19 @@
+spring:
+  data:
+    rest:
+      base-path: /api
+  h2:
+    console:
+      enabled: true
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  security:
+    user:
+      name: linor
+      password: init0000!
+      roles: ADMIN,USER
+  mustache:
+    expose-request-attributes: true

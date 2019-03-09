@@ -1,0 +1,14 @@
+server:
+  port: ${port:8181}
+  
+spring:
+  h2:
+    console:  
+      enabled: true
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  mustache:
+    expose-request-attributes: true

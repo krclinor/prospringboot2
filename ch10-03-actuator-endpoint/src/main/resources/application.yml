@@ -1,0 +1,14 @@
+#actuator info 설정
+info:
+  application-name: ${spring.application.name}
+  developer:
+    email: krclinor@gmail.com
+    name: 대단한 개발자
+spring:
+  application:
+    name: todo-actuator
+management:
+  endpoints:
+    web:
+      exposure.include: "*"
+    

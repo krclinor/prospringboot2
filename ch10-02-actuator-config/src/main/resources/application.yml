@@ -1,0 +1,34 @@
+#actuator info 설정
+info:
+  application-name: ${spring.application.name}
+  developer:
+    email: krclinor@gmail.com
+    name: 대단한 개발자
+management:
+  server:
+    #actuator Context Path 설정
+    servlet.context-path: /admin
+    #actuator 포트 설정
+    port: 8081
+    #actuator 서버ip 설정
+    address: 127.0.0.1
+  endpoint:
+    #shutdown endpoint 사용여부 설정 POST로 사용가능
+    shutdown.enabled: true
+    health.show-details: always
+  endpoints:
+    web:
+      exposure.include: "*"
+      # beans endpoint를 spring으로 변경
+      path-mapping.beans: spring
+      # /actuator에서 /monitor로 변경
+      base-path: /monitor
+spring:
+  application:
+    name: todo-actuator
+  #actuator 관리자 설정
+  security.user:
+      name: linor
+      password: init0000!
+      roles: ENDPOINT_ADMIN
+    
